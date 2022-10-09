@@ -29,3 +29,24 @@ exports.getCourse = async (req, res) => {
         response({ res, error })
     }
 }
+
+// Update
+exports.updateCourse = async (req, res) => {
+    try {
+        const { CourseID, CourseName, CourseDescription } = req.body;
+        const course = await courseModel.findOneAndUpdate({ CourseID }, { CourseName, CourseDescription }, { new: true });
+        return response({ res, data: course })
+    } catch (error) {
+        response({ res, error })
+    }
+}
+
+// Get All
+exports.getAllCourses = async (req, res) => {
+    try {
+        const courses = await courseModel.find();
+        return response({ res, data: courses.length ? courses : null })
+    } catch (error) {
+        response({ res, error })
+    }
+}
