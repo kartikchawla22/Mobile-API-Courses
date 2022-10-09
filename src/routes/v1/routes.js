@@ -8,5 +8,14 @@ router.route('/updateCourse')
     .put(courseController.updateCourse)
 router.route('/getAllCourses')
     .get(courseController.getAllCourses)
+router
+    .route("/deleteCourse/:courseID")
+
+      .delete(courseController.deleteCourse);
+
+ router
+      .route("/insertCourse")
+
+      .post(courseController.insertCourse);
     
 module.exports = router;
