@@ -1,0 +1,17 @@
+[
+    {
+        "CourseID": 1,
+        "CourseName": "Mobile API",
+        "CourseDescription": "this is Mobile API"
+    },
+    {
+        "CourseID": 2,
+        "CourseName": "Gaming",
+        "CourseDescription": "this is gaming"
+    },
+    {
+        "CourseID": 3,
+        "CourseName": "iOS",
+        "CourseDescription": "this is iOS"
+    }
+]
